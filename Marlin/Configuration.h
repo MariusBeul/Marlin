@@ -559,9 +559,9 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED -1
 #define TEMP_SENSOR_PROBE 0
-#define TEMP_SENSOR_CHAMBER -1
+#define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
 #define TEMP_SENSOR_BOARD 0
 #define TEMP_SENSOR_REDUNDANT 0
@@ -642,8 +642,8 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
-#define CHAMBER_MAXTEMP  100
+#define BED_MAXTEMP       90
+#define CHAMBER_MAXTEMP   60
 
 /**
  * Thermal Overshoot
@@ -753,7 +753,7 @@
  * When set to any value below 255, enables a form of PWM to the bed that acts like a divider
  * so don't use it unless you are OK with PWM on your bed. (See the comment on enabling PIDTEMPBED)
  */
-#define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
+#define MAX_BED_POWER 100 // limits duty cycle to bed; 255=full current
 
 /**
  * PID Bed Heating
@@ -812,7 +812,7 @@
  * When set to any value below 255, enables a form of PWM to the chamber heater that acts like a divider
  * so don't use it unless you are OK with PWM on your heater. (See the comment on enabling PIDTEMPCHAMBER)
  */
-#define MAX_CHAMBER_POWER 100 // limits duty cycle to chamber heater; 255=full current
+#define MAX_CHAMBER_POWER 255 // limits duty cycle to chamber heater; 255=full current
 
 #if ENABLED(PIDTEMPCHAMBER)
   #define MIN_CHAMBER_POWER 0
@@ -2254,8 +2254,8 @@
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 340
-#define PREHEAT_2_TEMP_BED    110
-#define PREHEAT_2_TEMP_CHAMBER 60
+#define PREHEAT_2_TEMP_BED     60
+#define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
