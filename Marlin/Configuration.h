@@ -1511,7 +1511,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 5.62 } // Uprint Schublade, 3.75 for Glas
+#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 5.62 } // 5.62 for original uPrint bed, 3.75 for glas bed
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
